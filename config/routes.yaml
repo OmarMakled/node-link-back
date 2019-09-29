@@ -1,0 +1,16 @@
+node.all:
+  path: /api/nodes
+  methods: "GET"
+  controller: App\Controller\NodeController::all
+node.add:
+  path: /api/nodes
+  methods: "POST"
+  controller: App\Controller\NodeController::add
+node.update:
+  path: /api/nodes/{id}
+  methods: "PUT"
+  controller: App\Controller\NodeController::update
+node.delete:
+  path: /api/nodes/{id}
+  methods: "DELETE"
+  controller: App\Controller\NodeController::delete
