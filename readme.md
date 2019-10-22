@@ -17,7 +17,7 @@
 ### API
 
 ```
-GET http://localhost:8000/
+GET http://localhost:8000/api/nodes
 ```
 
 **Response**
@@ -26,31 +26,40 @@ GET http://localhost:8000/
 Status: 200 OK
 {
   "-LpVRpkri9eGdgIQlJ0P": {
-    "meta": [
-      {
-        "key": "a",
-        "value": "aa"
-      }
+    "name": "STRING",
+    "neighborhoods": [
+    	{"id": "STRING", "direction": "STRING"},  
+	{"id": "STRING", "direction": "STRING"},
+	...
     ],
-    "name": "A",
-    "parent": ""
+    "meta": [
+      { "key": "STRING", "value": "STRING" },
+      { "key": "STRING", "value": "STRING" },
+      ...
+    ]
   }
 }
 ```
 
 ```
-POST http://localhost:8000/
+POST http://localhost:8000/api/nodes
 ```
 
 **Parameters**
 
 ```
 {
-	"name": "A",
-	"parent": "",
-	"meta": [
-		{"key": "a", "value": "aa"}
-	]
+    "name": "STRING",
+    "neighborhoods": [
+    	{"id": "STRING", "direction": "STRING"},  
+	{"id": "STRING", "direction": "STRING"},
+	...
+    ],
+    "meta": [
+      { "key": "STRING", "value": "STRING" },
+      { "key": "STRING", "value": "STRING" },
+      ...
+    ]
 }
 ```
 
@@ -64,18 +73,24 @@ Status: 201 OK
 ```
 
 ```
-PUT http://localhost:8000/:id
+PUT http://localhost:8000/api/nodes/:id
 ```
 
 **Parameters**
 
 ```
 {
-	"name": "A",
-	"parent": "",
-	"meta": [
-		{"key": "a", "value": "aa"}
-	]
+    "name": "STRING",
+    "neighborhoods": [
+    	{"id": "STRING", "direction": "STRING"},  
+	{"id": "STRING", "direction": "STRING"},
+	...
+    ],
+    "meta": [
+      { "key": "STRING", "value": "STRING" },
+      { "key": "STRING", "value": "STRING" },
+      ...
+    ]
 }
 ```
 
@@ -84,19 +99,22 @@ PUT http://localhost:8000/:id
 ```
 Status: 200 OK
 {
-  "meta": [
-    {
-      "key": "a",
-      "value": "aa"
-    }
-  ],
-  "name": "A",
-  "parent": ""
+    "name": "STRING",
+    "neighborhoods": [
+    	{"id": "STRING", "direction": "STRING"},  
+	{"id": "STRING", "direction": "STRING"},
+	...
+    ],
+    "meta": [
+      { "key": "STRING", "value": "STRING" },
+      { "key": "STRING", "value": "STRING" },
+      ...
+    ]
 }
 ```
 
 ```
-DELETE http://localhost:8000/:id
+DELETE http://localhost:8000/api/nodes/:id
 ```
 
 **Response**
