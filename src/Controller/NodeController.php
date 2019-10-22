@@ -62,8 +62,7 @@ class NodeController extends BaseController
         return new JsonResponse(
             $this->nodeService->add([
                 'name' => $request->request->get('name'),
-                'next' => $request->request->get('next'),
-                'previous' => $request->request->get('previous'),
+                'neighborhoods' => $request->request->get('neighborhoods'),
                 'meta' => $request->request->get('meta'),
             ]),
             Response::HTTP_CREATED
@@ -85,8 +84,7 @@ class NodeController extends BaseController
         return new JsonResponse(
             $this->nodeService->update($id, [
                 'name' => $request->request->get('name'),
-                'next' => $request->request->get('next'),
-                'previous' => $request->request->get('previous'),
+                'neighborhoods' => $request->request->get('neighborhoods'),
                 'meta' => $request->request->get('meta'),
             ], Response::HTTP_ACCEPTED)
         );
